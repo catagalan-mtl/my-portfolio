@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" data-controller="nav" >
 
   <div class="menu-btn-container">
     <label class="theme-switch" for="theme-switch">
@@ -6,11 +6,11 @@
       <input data-action="click->theme#fire" type="checkbox" id="theme-switch" role="switch"/>
     </label>
     <!-- <div class="container"> -->
-    <button type="button" class="menu-btn">menu</button>
+    <button data-action="click->nav#fire" data-nav-target="buttonElement" type="button" class="menu-btn">menu</button>
     <!-- </div> -->
   </div>
 
-  <nav class="nav hidden">
+  <nav class="nav hidden" data-nav-target="navElement" >
     <ol class="nav-items">
       <li class="nav-item"><a href="#">Home</a></li>
       <li class="nav-item"><a href="#work">My Work</a></li>
@@ -22,7 +22,7 @@
     </ol>
   </nav>
 
-  <div class="container">
+  <div class="container" data-nav-target="heroElement" >
     <div class="header-textbox">
       <!-- Replace with your name and job title -->
       <h1 class="h1">

@@ -157,6 +157,31 @@ main {
   background-color: var(--bg-color-secondary);
   color: var(--important);
   cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+.menu-btn-nav {
+  display: block;
+  /* margin-inline-start: auto; */
+
+  border: 1px solid var(--border-dark);
+  inline-size: 110px;
+  padding-block: var(--gutter-nano);
+  border-radius: var(--gutter-x-large);
+  text-decoration: none;
+  background-color: var(--border-dark);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.menu-btn:hover,
+.btn-secondary:focus {
+  border-color: var(--important);
+}
+
+.menu-btn-nav:hover,
+.btn-secondary:focus {
+  border-color: white;
 }
 
 .menu-btn,
