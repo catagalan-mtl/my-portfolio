@@ -1,0 +1,72 @@
+/* --------------------------------- */
+/* ----- Clients -----*/
+/* --------------------------------- */
+
+.logos {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: var(--gutter-x-large);
+  padding-block-start: var(--gutter-x-large);
+  font-size: larger;
+}
+
+@media (max-width: 885px) {
+  .logos {
+    padding-block-start: calc(
+      var(--gutter-x-large) + var(--gutter-x-large) - 2rem
+    );
+  }
+}
+
+.logo-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  max-block-size: 60px;
+  max-inline-size: 150px;
+  transition: all 2.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (max-width: 845px) {
+  .logo {
+    max-inline-size: 100px;
+  }
+
+  /* .logo-group:last-child {
+    display: none;
+  } */
+}
+
+@media (max-width: 400px) {
+  .logo {
+    max-inline-size: 85px;
+  }
+}
+
+.logo.hide {
+  opacity: 0;
+}
+
+.logo.to-top {
+  transform: scale(0.4) translateY(-150px);
+}
+
+.logo.to-bottom {
+  transform: scale(0.4) translateY(150px);
+}
+
+body.dark .logo {
+  filter: invert(97%) grayscale(100%) opacity(0.6);
+}
+
+body.light .logo {
+  filter: grayscale(100%) opacity(0.6);
+}
