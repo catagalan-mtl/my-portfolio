@@ -12,12 +12,12 @@
 
 body.dark .header {
   background-image: linear-gradient(#00000032, #000000e8),
-    url("../../images/hero-bg-dark.jpg");
+    url("hero-bg-dark.jpg");
 }
 
 body.light .header {
   background-image: linear-gradient(#caaeaec3, #ffffffe4),
-    url("../../images/hero-bg-light.webp");
+    url("hero-bg-light.webp");
 }
 
 .header-textbox {

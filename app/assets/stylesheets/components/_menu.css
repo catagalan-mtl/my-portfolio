@@ -3,7 +3,7 @@
   position: fixed;
   width: 100%;
   background-color: #d1a2b3;
-  background-image: linear-gradient(#68619c2f, #c5adb7c4), url("../../images/menu.jpg");
+  background-image: linear-gradient(#68619c2f, #c5adb7c4), url("menu.png");
   transition: 450ms var(--easing);
   z-index: 3;
 }
