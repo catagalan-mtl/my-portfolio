@@ -30,11 +30,11 @@
 .nav-item a::after {
   content: "";
   display: block;
-  block-size: var(--gutter-nano);
+  block-size: 0.2rem;
   width: 100%;
   transform: scale(0);
   transform-origin: left;
-  background-color: white;
+  background-color: var(--body);
   transition: transform 250ms var(--easing);
 }
 

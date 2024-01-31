@@ -1,5 +1,5 @@
-@import url("./_buttons.css");
-@import url("./_menu.css");
+/* @import url("./_buttons.css");
+@import url("./_menu.css"); */
 
 .header {
   min-block-size: calc(100vh + var(--radius));
