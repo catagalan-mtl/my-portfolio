@@ -1,0 +1,64 @@
+@import url("./_buttons.css");
+@import url("./_menu.css");
+
+.header {
+  min-block-size: calc(100vh + var(--radius));
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+body.dark .header {
+  background-image: linear-gradient(#00000032, #000000e8),
+    url("../../images/hero-bg-dark.jpg");
+}
+
+body.light .header {
+  background-image: linear-gradient(#caaeaec3, #ffffffe4),
+    url("../../images/hero-bg-light.webp");
+}
+
+.header-textbox {
+  position: absolute;
+  top: 52%;
+  transform: translateY(-50%);
+}
+
+.header-text {
+  font-size: var(--text-large);
+  font-weight: 400;
+  max-inline-size: 745px;
+  margin-block-start: var(--gutter-micro);
+  margin-block-end: var(--gutter-medium);
+}
+
+@media (max-width: 1200px) {
+  .header-text {
+    max-inline-size: 685px;
+  }
+}
+
+@media (max-width: 845px) {
+  .header-text {
+    max-inline-size: 585px;
+  }
+}
+
+.header-btns {
+  display: inline-flex;
+  gap: var(--gutter-x-small);
+}
+
+@media (max-width: 400px) {
+  .header-textbox {
+    left: 0;
+    text-align: center;
+    padding-inline: 0.6rem;
+  }
+  .header-btns {
+    flex-direction: column;
+    width: 80%;
+  }
+}
