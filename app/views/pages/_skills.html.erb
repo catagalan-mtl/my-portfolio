@@ -1,27 +1,24 @@
 <section class="client">
   <div class="container">
     <h2 class="h2">My Skills</h2>
+
     <div class="logos" data-controller="rotate">
+
       <!-- Replace alt with client/company name and src attributes of images with path to relative img of client logo -->
-      <div data-rotate-target="logoWrapper">
-        <p class="logo">Ruby</p>
-      <%# </div> %>
-      <%# <div data-rotate-target="logoWrapper"> %>
-        <img
-          loading="lazy"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-plain.svg"
-          alt="Ruby logo"
-          class="logo"
-        />
-        <p class="logo">Ruby</p>
-        <img
-          loading="lazy"
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-plain.svg"
-          alt="Ruby logo"
-          class="logo"
-        />
+      <div data-rotate-target="logoWrapper" class="logo-group" >
+        <i class="devicon-ruby-plain logo hide" style="font-size: 60px"></i>
+        <p class="logo hide" style="font-size: 30px">Ruby</p>
+        <i class="devicon-ruby-plain logo hide" style="font-size: 60px"></i>
+        <p class="logo hide" style="font-size: 30px">Ruby</p>
       </div>
+
+      <div data-rotate-target="logoWrapper" class="logo-group">
+        <i class="devicon-rails-plain logo hide" style="font-size: 60px"></i>
+        <p class="logo hide" style="font-size: 30px">Rails</p>
+        <i class="devicon-rails-plain logo hide" style="font-size: 60px"></i>
+        <p class="logo hide" style="font-size: 30px">Rails</p>
       </div>
+
     </div>
   </div>
 </section>
