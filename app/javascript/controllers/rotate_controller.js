@@ -1,13 +1,38 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="rotate"
 export default class extends Controller {
-  static targets = ["logoElement", "nameElement"]
-  static classes = ["hide", "toTop"]
+  static targets = ["logoWrapper"]
+
   connect() {
     console.log("Hello, from rotate_controller.js")
-    this.logoElementTargets.classList.add(this.hide, this.toTop);
-    this.nameElementTargets.classList.remove(this.hide, this.toTop);
+    this.rotateLogos();
   }
 
+  sleep(number) {
+    return new Promise((res) => setTimeout(res, number));
+  }
+
+  async rotateLogos() {
+
+    this.logoWrapperTargets.forEach(async (logoWrapper, i) => {
+      const logos = Array.from(logoWrapper.children);
+      await this.sleep(1000 * i);
+      setInterval(() => {
+        let temp = logos[0];
+        logos[0] = logos[1];
+        logos[1] = logos[2];
+        logos[2] = logos[3];
+        logos[3] = temp;
+        logos[0].classList.add("hide", "to-top");
+        logos[1].classList.remove("hide", "to-top", "to-bottom");
+        logos[2].classList.add("hide", "to-bottom");
+        logos[3].classList.add("hide", "to-top", "to-bottom");
+      }, 3000);
+    });
+  }
 }
+
+
+// export default class extends Controller {
+
+// }
