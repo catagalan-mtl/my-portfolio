@@ -8,7 +8,7 @@
   justify-content: space-around;
   gap: var(--gutter-x-large);
   padding-block-start: var(--gutter-x-large);
-  font-size: larger;
+  /* font-size: larger; */
 }
 
 @media (max-width: 885px) {
@@ -25,19 +25,22 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-bottom: 50px;
+  padding: 1.5vw 6vw;
 }
 
 .logo {
   position: absolute;
   top: 0;
   max-block-size: 60px;
-  max-inline-size: 150px;
+  max-inline-size: 300px;
   transition: all 2.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 @media (max-width: 845px) {
   .logo {
-    max-inline-size: 100px;
+    max-inline-size: 250px;
+    /* padding: 50px; */
   }
 
   .logo-group:last-child {
@@ -47,7 +50,8 @@
 
 @media (max-width: 400px) {
   .logo {
-    max-inline-size: 85px;
+    max-inline-size: 150px;
+    /* padding: 20px; */
   }
 }
 
