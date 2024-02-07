@@ -1,6 +1,7 @@
 @import url("../components/_hero.css");
 @import url("../components/_buttons.css");
 @import url("../components/_menu.css");
+@import url("../components/_skills.css");
 
 :root {
   --h1: 3.5rem;
