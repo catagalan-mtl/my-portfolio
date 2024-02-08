@@ -27,7 +27,7 @@ export default class extends Controller {
         logos[1].classList.remove("hide", "to-top", "to-bottom");
         logos[2].classList.add("hide", "to-bottom");
         logos[3].classList.add("hide", "to-top", "to-bottom");
-      }, 3000);
+      }, 5000);
     });
   }
 }
