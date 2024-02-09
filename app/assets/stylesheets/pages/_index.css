@@ -2,6 +2,8 @@
 @import url("../components/_buttons.css");
 @import url("../components/_menu.css");
 @import url("../components/_skills.css");
+@import url("../components/_project_card.css");
+@import url("../components/_contact_form.css");
 
 :root {
   --h1: 3.5rem;
@@ -52,7 +54,7 @@ body.dark {
 }
 
 body.light {
-  --bg-color-primary: #f8f1f7;
+  --bg-color-primary: #f7f4f4;
   --bg-color-secondary: #ffffff;
   --important: #000;
   --sub: #111;
@@ -97,6 +99,7 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
+
 
 /* Improve media defaults */
 
@@ -242,4 +245,37 @@ h3,
 .shown {
   transition: 0.1s;
   color: lightgrey;
+}
+
+/* --------------------------------- */
+/* ----- Layout -----*/
+/* --------------------------------- */
+
+section:not(:first-child) {
+  padding-block-start: var(--gutter-x-large);
+}
+
+section:first-child {
+  padding-block-start: 5rem;
+}
+
+@media (max-width: 885px) {
+  :root {
+    --gutter-huge: 8rem;
+    --gutter-x-large: 4rem;
+  }
+}
+
+main {
+  border-top: 1px solid var(--border);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  background-color: var(--bg-color-primary);
+  transform: translateY(calc(-1 * var(--radius)));
+}
+
+@media (max-width: 1185px) {
+  :root {
+    --radius: 45px;
+  }
 }

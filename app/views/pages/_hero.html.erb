@@ -11,14 +11,12 @@
   </div>
 
   <nav class="nav hidden" data-nav-target="navElement" >
-    <ol class="nav-items">
+    <ol class="nav-items" data-action="click->nav#fire">
       <li class="nav-item"><a href="#">Home</a></li>
       <li class="nav-item"><a href="#skills">My Skills</a></li>
-      <li class="nav-item"><a href="#work">Projects</a></li>
+      <li class="nav-item"><a href="#projects">Projects</a></li>
       <%# <li class="nav-item"><a href="#about">About</a></li> %>
-      <li class="nav-item">
-        <a href="#contact" data-focused="last-focused">Contact</a>
-      </li>
+      <li class="nav-item"><a href="#contact" data-focused="last-focused">Contact</a></li>
     </ol>
   </nav>
 
@@ -39,7 +37,7 @@
 
       <div class="header-btns">
         <a href="#contact" class="btn btn-cta">Contact</a>
-        <a href="#work" class="btn btn-secondary">Projects</a>
+        <a href="#projects" class="btn btn-secondary">Projects</a>
       </div>
     </div>
   </div>

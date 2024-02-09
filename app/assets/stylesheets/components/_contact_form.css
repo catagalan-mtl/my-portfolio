@@ -1,0 +1,129 @@
+.contact-content {
+  display: grid;
+  grid-template-columns: minmax(245px, 35%) 1fr;
+  margin-block: var(--gutter-x-large);
+  border: 1px solid var(--border);
+  border-radius: var(--gutter-nano);
+}
+
+@media (max-width: 1032px) {
+  .contact-content {
+    display: flex;
+    flex-direction: column-reverse;
+    max-inline-size: 845px;
+    margin-inline: auto;
+  }
+}
+
+.contact-textbox,
+.contact-form {
+  padding: var(--gutter-large) var(--gutter-small);
+}
+
+.hire-alert {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gutter-nano);
+  font-size: initial;
+  padding: var(--gutter-nano) var(--gutter-micro);
+  border-radius: var(--gutter-small);
+  position: relative;
+  z-index: 1;
+  margin-block-end: var(--gutter-small);
+  color: var(--important);
+}
+
+.hire-alert::before,
+.hire-alert::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.hire-alert::after {
+  background-image: var(--gradient-border);
+  z-index: -2;
+}
+
+.hire-alert::before {
+  background-color: var(--bg-color-primary);
+  inset: 1px;
+  z-index: -1;
+}
+
+.indicator {
+  display: inline-block;
+  block-size: var(--gutter-nano);
+  inline-size: var(--gutter-nano);
+  border-radius: 50%;
+  background-color: red;
+  animation: blink 550ms alternate infinite var(--easing);
+}
+
+@keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+.contact-text {
+  margin-block-end: var(--gutter-small);
+}
+
+.signatures {
+  inline-size: 150px;
+}
+
+body.light .signatures {
+  filter: invert(1);
+}
+
+.contact-form {
+  margin-top: var(--gutter-large);
+  background-color: var(--bg-color-secondary);
+  border-radius: var(--gutter-x-small);
+}
+
+.form-field label,
+.form-field input,
+.form-field textarea {
+  display: block;
+  width: 100%;
+}
+
+.form-field label {
+  color: var(--important);
+}
+
+.form-field input,
+.form-field textarea {
+  font-size: var(--text-small);
+  color: var(--sub);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--border);
+  background-color: transparent;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: #888;
+}
+
+.form-field input,
+.form-field textarea {
+  margin-block-end: var(--gutter-small);
+  padding: var(--gutter-nano);
+  margin-inline: var(--gutter-nano);
+}
+
+.form-field label {
+  font-size: var(--text-small);
+  margin-block-end: var(--gutter-nano);
+  margin-inline-start: var(--gutter-nano);
+}
+
+.contact-form button[type="submit"] {
+  border: none;
+}
