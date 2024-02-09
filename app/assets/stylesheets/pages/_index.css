@@ -100,6 +100,7 @@ body {
   overflow-x: hidden;
 }
 
+
 /* Improve media defaults */
 
 picture,
@@ -244,4 +245,37 @@ h3,
 .shown {
   transition: 0.1s;
   color: lightgrey;
+}
+
+/* --------------------------------- */
+/* ----- Layout -----*/
+/* --------------------------------- */
+
+section:not(:first-child) {
+  padding-block-start: var(--gutter-x-large);
+}
+
+section:first-child {
+  padding-block-start: 5rem;
+}
+
+@media (max-width: 885px) {
+  :root {
+    --gutter-huge: 8rem;
+    --gutter-x-large: 4rem;
+  }
+}
+
+main {
+  border-top: 1px solid var(--border);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  background-color: var(--bg-color-primary);
+  transform: translateY(calc(-1 * var(--radius)));
+}
+
+@media (max-width: 1185px) {
+  :root {
+    --radius: 45px;
+  }
 }
