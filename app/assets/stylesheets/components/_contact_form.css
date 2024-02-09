@@ -80,9 +80,9 @@ body.light .signatures {
 }
 
 .contact-form {
+  margin-top: var(--gutter-large);
   background-color: var(--bg-color-secondary);
-  border-top-right-radius: var(--gutter-nano);
-  border-bottom-right-radius: var(--gutter-nano);
+  border-radius: var(--gutter-x-small);
 }
 
 .form-field label,
