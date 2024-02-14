@@ -1,0 +1,72 @@
+<section class="projects">
+  <div class="container">
+    <h2 class="h2" id="projects">My Projects</h2>
+    <%# <%= render 'partials/info_modal' %>
+        <project class="project-box featured-project">
+          <% @projects.each do |project| %>
+            <h3 class="h3">
+              <%= project.name %>
+            </h3>
+            <div class="project-textbox">
+              <p class="project-text">
+                <%= project.description %>
+              </p>
+              <div class="project-demo">
+                <a href="#" class="link"
+                  >More info</a>
+                <a href="#" class="link" target="_blank" rel="noopener"
+                  >View Demo</a>
+                <a href=<%= project.gh_url %> class="link" target="_blank" rel="noopener"
+                  >GitHub <i class="fa-brands fa-github-alt"></i></a>
+              </div>
+            </div>
+            <picture class="project-illustration">
+              <%= image_tag project.img_url %>
+            </picture>
+          <% end %>
+        </project>
+      <project class="project-box featured-project">
+        <div class="project-textbox">
+          <h3 class="h3">
+            Pawsh
+          </h3>
+          <p class="project-text">
+            This is my project.
+          </p>
+          <div class="project-demo">
+            <a href="#" class="link" target="_blank" rel="noopener"
+              >More info</a>
+            <a href="#" class="link" target="_blank" rel="noopener"
+              >View Demo</a>
+            <a href="https://github.com/catagalan-mtl/pawsh" class="link" target="_blank" rel="noopener"
+              >GitHub <i class="fa-brands fa-github-alt"></i></a>
+          </div>
+        </div>
+        <picture class="project-illustration">
+          <%= image_tag "pawsh-landing" %>
+        </picture>
+      </project>
+      <project class="project-box featured-project">
+        <div class="project-textbox">
+          <h3 class="h3">
+            My Portfolio
+          </h3>
+          <p class="project-text">
+            This is my project.
+          </p>
+          <div class="project-demo">
+            <a href="#" class="link" target="_blank" rel="noopener"
+              >More info</a>
+            <a href="#" class="link" target="_blank" rel="noopener"
+              >View Demo</a>
+            <a href="https://github.com/catagalan-mtl/my-portfolio" class="link" target="_blank" rel="noopener"
+              >GitHub <i class="fa-brands fa-github-alt"></i></a>
+          </div>
+        </div>
+        <picture class="project-illustration">
+          <%= image_tag "sharing-card" %>
+        </picture>
+      </project>
+    <%# </div> %>
+  </div>
+</section>
