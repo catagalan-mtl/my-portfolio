@@ -37,7 +37,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="dark" data-controller="theme" data-theme-target="themeElement">
+  <body data-controller="theme" data-theme-target="themeElement">
+     <script>
+    // Immediately set the theme class on the body based on the saved preference
+      var savedTheme = localStorage.getItem('toggle') === 'false' ? 'dark' : 'light';
+      document.body.className = savedTheme;
+      </script>
     <%= yield %>
   </body>
 </html>

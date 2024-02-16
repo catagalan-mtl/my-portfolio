@@ -11,17 +11,23 @@ export default class extends Controller {
   }
 
   fire() {
-    console.log("fire");
-    const newTheme = this.toggleElementTarget.checked ? "light" : "dark";
-    this.themeElementTarget.classList.remove("light", "dark");
-    this.themeElementTarget.classList.add(newTheme);
-    localStorage.setItem('toggle', this.toggleElementTarget.checked);
+    const isChecked = this.toggleElementTarget.checked;
+
+    if (!isChecked) {
+      this.themeElementTarget.classList.remove("light");
+      this.themeElementTarget.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      this.themeElementTarget.classList.add("light");
+      this.themeElementTarget.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
   }
 
   loadTheme() {
-    const toggleState = JSON.parse(localStorage.getItem('toggle')) || false; // default to unchecked (dark theme)
-    this.toggleElementTarget.checked = toggleState;
-    const theme = toggleState ? "light" : "dark";
-    this.themeElementTarget.classList.add(theme);
+    const storedTheme = localStorage.getItem("theme") || "dark";
+    this.toggleElementTarget.checked = storedTheme === "light";
+    this.themeElementTarget.classList.remove("light", "dark");
+    this.themeElementTarget.classList.add(storedTheme);
   }
 }
