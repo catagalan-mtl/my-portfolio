@@ -2,7 +2,7 @@
 @import url("./_menu.css"); */
 
 .header-small {
-  min-block-size: calc(5vh + var(--radius));
+  min-block-size: calc(10vh + var(--radius));
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -23,6 +23,7 @@ body.light .header-small {
 .header-small-textbox {
   position: absolute;
   top: 54%;
+  left: 20%;
   transform: translateY(-50%);
 }
 
