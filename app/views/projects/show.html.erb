@@ -1,0 +1,22 @@
+<header class="header-small" data-controller="nav" >
+  <div class="menu-btn-container">
+    <label class="theme-switch" for="theme-switch">
+      <!-- <span></span> -->
+      <input data-theme-target="toggleElement" data-action="click->theme#fire" type="checkbox" id="theme-switch" role="switch"/>
+    </label>
+    <!-- <div class="container"> -->
+    <button type="button" class="menu-btn"><%= link_to "back", :back, class: "menu-btn" %></button>
+    <!-- </div> -->
+  </div>
+
+</header>
+<section class=project-show>
+</section>
+  <div class="container">
+    <div class="info-box">
+      <h2 class="h2" id="projects"><%= @project.name %></h2>
+      <div class="info-textbox">
+        <p><%= @project.info %></p>
+      </div>
+    </div>
+  </div>

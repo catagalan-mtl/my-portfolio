@@ -35,14 +35,14 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <script>
+      var storedTheme = localStorage.getItem("theme") || "dark";
+      document.body.className = storedTheme;
+    </script>
   </head>
 
   <body data-controller="theme" data-theme-target="themeElement">
-     <script>
-    // Immediately set the theme class on the body based on the saved preference
-      var savedTheme = localStorage.getItem('toggle') === 'false' ? 'dark' : 'light';
-      document.body.className = savedTheme;
-      </script>
     <%= yield %>
   </body>
 </html>
