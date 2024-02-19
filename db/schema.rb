@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_02_19_193109) do
+ActiveRecord::Schema[7.0].define(version: 2024_02_19_220357) do
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_19_193109) do
     t.datetime "updated_at", null: false
     t.string "credits"
     t.text "contribute"
+    t.string "tagline"
   end
 
 end
