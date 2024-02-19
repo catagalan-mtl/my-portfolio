@@ -53,9 +53,9 @@
           </ul>
         <% end %>
       </div>
-      <div class="media-box">
-
-      </div>
+      <picture class="media-box">
+        <%= video_tag @project.video_url, autoplay: :autoplay, loop: :loop, muted: :muted, controls: :true%>
+      </picture>
     </div>
   </div>
 </main>
