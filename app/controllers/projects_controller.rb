@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @info = @project.info
-    @video_url = @project.video_url
+    @contribute = @project.contribute
+    @stack = @project.stack.split(', ')
   end
 end

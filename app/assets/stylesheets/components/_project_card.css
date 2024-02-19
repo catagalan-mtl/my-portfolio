@@ -38,8 +38,7 @@
   .featured-project {
     margin-block-end: 24.4px;
     flex-direction: column-reverse;
-  margin-block-start: var(--gutter-medium);
-
+    margin-block-start: var(--gutter-medium);
   }
 
   .project-box {
@@ -47,11 +46,6 @@
     margin-block-end: var(--gutter-x-small);
   }
 }
-
-/* --------------------------------- */
-/* ----- Featured article -----*/
-/* --------------------------------- */
-
 
 @media (max-width: 768px) {
   .featured-project {

@@ -1,0 +1,59 @@
+<header class="header-small">
+
+  <div class="menu-btn-container">
+    <label class="theme-switch" for="theme-switch">
+      <!-- <span></span> -->
+      <input data-theme-target="toggleElement" data-action="click->theme#fire" type="checkbox" id="theme-switch" role="switch"/>
+    </label>
+    <!-- <div class="container"> -->
+    <button href="back" type="button" class="menu-btn" onclick="history.back()">back</button>
+    <!-- </div> -->
+  </div>
+
+  <div class="container">
+    <div class="header-small-textbox">
+      <!-- Replace with your name and job title -->
+      <h1 class="h1">FrontRow</h1>
+      <h4 class="h4"><i>The Concert Starts Here</i></h4>
+    </div>
+  </div>
+
+</header>
+
+<main>
+  <div class="container project-show">
+    <div class="info-box">
+      <div class="info-textbox">
+        <h3><%= @project.info %></h3>
+      </div>
+      <div class="stack-box">
+        <ul>
+          <% @stack.each do |language| %>
+            <li><%= language %></li>
+          <% end %>
+        </ul>
+      </div>
+      <picture class="media-box">
+        <%= video_tag @project.video_url, loop: :loop, muted: :muted, controls: :true%>
+      </picture>
+      <div class="credits">
+        <% if @project.contribute %>
+          <h4><strong>Contributors:</strong></h4>
+          <ul>
+            <% @project.contribute.each do |name, gh| %>
+              <li><%=  link_to ("<i class='fa-brands fa-github-alt'></i>").html_safe, gh, class: "link-icon", target: :_blank  %> - <%= name %></li>
+            <% end %>
+          </ul>
+        <% end %>
+        <% if @project.credits %>
+          <h4><strong>Credits:</strong></h4>
+          <ul>
+            <% @project.credits.each do |credit| %>
+              <li><%= credit %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>

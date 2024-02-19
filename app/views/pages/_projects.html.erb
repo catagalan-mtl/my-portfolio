@@ -2,6 +2,9 @@
   <div class="container">
     <h2 class="h2" id="projects">My Projects</h2>
     <%# <%= render 'partials/info_modal' %>
+    <% @projects.each do |project| %>
+      <%= render 'project_card', project: project %>
+    <% end %>
       <project class="project-box featured-project">
         <div class="project-textbox">
           <h3 class="h3">
