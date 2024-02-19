@@ -6,10 +6,6 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     @contribute = @project.contribute
-    # raise
-    # @contribute.each do |name, gh|
-    #   @name = name
-    #   @gh = gh
-    # end
+    @stack = @project.stack.split(', ')
   end
 end

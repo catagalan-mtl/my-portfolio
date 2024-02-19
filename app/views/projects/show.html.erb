@@ -20,21 +20,22 @@
 
 </header>
 
-<%# <section class=project-show> %>
 <main>
   <div class="container project-show">
     <div class="info-box">
-      <%# <h2 class="h2" id="projects"></h2> %>
       <div class="info-textbox">
         <h3><%= @project.info %></h3>
       </div>
       <div class="stack-box">
         <ul>
-          <%= @project.stack do |language| %>
-              <li><%= language %></li>
+          <% @stack.each do |language| %>
+            <li><%= language %></li>
           <% end %>
         </ul>
       </div>
+      <picture class="media-box">
+        <%= video_tag @project.video_url, loop: :loop, muted: :muted, controls: :true%>
+      </picture>
       <div class="credits">
         <% if @project.contribute %>
           <h4><strong>Contributors:</strong></h4>
@@ -45,7 +46,7 @@
           </ul>
         <% end %>
         <% if @project.credits %>
-          <h4>Credits:</h4>
+          <h4><strong>Credits:</strong></h4>
           <ul>
             <% @project.credits.each do |credit| %>
               <li><%= credit %></li>
@@ -53,10 +54,6 @@
           </ul>
         <% end %>
       </div>
-      <picture class="media-box">
-        <%= video_tag @project.video_url, autoplay: :autoplay, loop: :loop, muted: :muted, controls: :true%>
-      </picture>
     </div>
   </div>
 </main>
-<%# </section> %>
