@@ -40,7 +40,7 @@
           <h4><strong>Contributors:</strong></h4>
           <ul>
             <% @project.contribute.each do |name, gh| %>
-              <li> • <%= name %> <%=  link_to (" <i class='fa-brands fa-github-alt'></i>").html_safe, gh, class: "link-icon", target: :_blank  %>  </li>
+              <li><%=  link_to ("<i class='fa-brands fa-github-alt'></i>").html_safe, gh, class: "link-icon", target: :_blank  %> - <%= name %></li>
             <% end %>
           </ul>
         <% end %>

@@ -131,6 +131,7 @@ body.light .header-small {
 } */
 
 .info-box .info-textbox {
+  justify-content: center;
   font-size: var(--text-medium);
   margin-block-end: var(--gutter-small);
 }
@@ -151,5 +152,5 @@ body.light .header-small {
 }
 
 .credits li {
-  display: inline;
+  list-style-type: none;
 }
