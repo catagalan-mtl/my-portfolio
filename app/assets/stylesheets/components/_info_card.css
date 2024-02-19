@@ -2,7 +2,7 @@
 @import url("./_menu.css"); */
 
 .header-small {
-  min-block-size: calc(10vh + var(--radius));
+  min-block-size: calc(25vh + var(--radius));
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -22,8 +22,8 @@ body.light .header-small {
 
 .header-small-textbox {
   position: absolute;
-  top: 54%;
-  left: 20%;
+  top: 40%;
+  left: 15%;
   transform: translateY(-50%);
 }
 
@@ -37,12 +37,16 @@ body.light .header-small {
 
 @media (max-width: 1200px) {
   .header-small-text {
+    top: 30%;
+    left: 10%;
     max-inline-size: 685px;
   }
 }
 
 @media (max-width: 845px) {
   .header-small-text {
+    top: 45%;
+    left: 10%;
     max-inline-size: 585px;
   }
 }
@@ -55,7 +59,8 @@ body.light .header-small {
 @media (max-width: 400px) {
   .header-small-textbox {
     left: 0;
-    text-align: center;
+    top: 50%;
+    /* text-align: center; */
     padding-inline: 0.6rem;
   }
   .header-small-btns {
@@ -93,7 +98,7 @@ body.light .header-small {
 @media (max-width: 650px) {
   .info-box {
     margin-block-end: 24.4px;
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
     margin-block-start: var(--gutter-medium);
   }
 

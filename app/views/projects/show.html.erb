@@ -14,19 +14,31 @@
     <div class="header-small-textbox">
       <!-- Replace with your name and job title -->
       <h1 class="h1">FrontRow</h1>
-      <h3 class="h3"><i>The Concert Starts Here</i></h3>
+      <h4 class="h4"><i>The Concert Starts Here</i></h4>
     </div>
   </div>
 
 </header>
 
-<section class=project-show>
-</section>
-  <div class="container">
+<%# <section class=project-show> %>
+<main>
+  <div class="container project-show">
     <div class="info-box">
-      <h2 class="h2" id="projects"><%= @project.name %></h2>
+      <%# <h2 class="h2" id="projects"></h2> %>
       <div class="info-textbox">
-        <p><%= @project.info %></p>
+        <h3><%= @project.info %></h3>
+      </div>
+      <div class="stack-box">
+        <ul>
+          <%= @project.stack do |language| %>
+              <li><%= language %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="media-box">
+
       </div>
     </div>
   </div>
+</main>
+<%# </section> %>
