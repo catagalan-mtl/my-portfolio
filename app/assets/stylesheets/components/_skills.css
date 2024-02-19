@@ -6,9 +6,8 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  gap: var(--gutter-x-large);
+  gap: 7rem;
   padding-block-start: var(--gutter-x-large);
-  /* font-size: larger; */
 }
 
 @media (max-width: 885px) {

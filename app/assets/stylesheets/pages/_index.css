@@ -198,6 +198,7 @@ h3,
 
 .container {
   max-inline-size: var(--site-max-width);
+  /* max-inline-size: 80%; */
   margin-inline: auto;
 }
 
