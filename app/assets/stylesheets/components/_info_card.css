@@ -77,7 +77,7 @@ body.light .header-small {
   gap: 3.5%;
   margin-block-start: var(--gutter-large);
   margin-block-end: px;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   border: 1px solid var(--border);
   padding: var(--gutter-medium) var(--gutter-small);
@@ -87,8 +87,7 @@ body.light .header-small {
 
 .info-textbox {
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -133,9 +132,24 @@ body.light .header-small {
 
 .info-box .info-textbox {
   font-size: var(--text-medium);
+  margin-block-end: var(--gutter-small);
 }
 
 /* .info-box .project-demo {
   justify-content: flex-start;
   gap: var(--gutter-medium);
 } */
+
+.link-icon {
+  color: var(--body)
+}
+
+.credits {
+  align-self: start;
+  font-size: var(--text-small);
+  margin-block-start: var(--gutter-small);
+}
+
+.credits li {
+  display: inline;
+}

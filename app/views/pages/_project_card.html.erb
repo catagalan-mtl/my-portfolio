@@ -4,9 +4,9 @@
       <p class="project-text"><%= project.description %></p>
       <div class="project-demo">
 
-        <%= link_to "More Info", project_path(project, filter: :info), class: "link" %>
+        <%= link_to "More Info", project_path(project), class: "link" %>
 
-        <%= link_to "View Demo", project_path(project, filter: :video_url), class: "link" %>
+        <%= link_to "View Demo", project_path(project), class: "link" %>
 
         <%= link_to ("GitHub <i class='fa-brands fa-github-alt'></i>").html_safe, project.gh_url, class: "link", target: :_blank  %>
       </div>

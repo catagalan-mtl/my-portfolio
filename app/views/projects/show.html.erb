@@ -35,6 +35,24 @@
           <% end %>
         </ul>
       </div>
+      <div class="credits">
+        <% if @project.contribute %>
+          <h4><strong>Contributors:</strong></h4>
+          <ul>
+            <% @project.contribute.each do |name, gh| %>
+              <li> • <%= name %> <%=  link_to (" <i class='fa-brands fa-github-alt'></i>").html_safe, gh, class: "link-icon", target: :_blank  %>  </li>
+            <% end %>
+          </ul>
+        <% end %>
+        <% if @project.credits %>
+          <h4>Credits:</h4>
+          <ul>
+            <% @project.credits.each do |credit| %>
+              <li><%= credit %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
       <div class="media-box">
 
       </div>
