@@ -1,73 +1,8 @@
 <section class="projects">
   <div class="container">
     <h2 class="h2" id="projects">My Projects</h2>
-    <%# <%= render 'partials/info_modal' %>
     <% @projects.each do |project| %>
       <%= render 'project_card', project: project %>
     <% end %>
-      <project class="project-box featured-project">
-        <div class="project-textbox">
-          <h3 class="h3">
-            FrontRow
-          </h3>
-          <p class="project-text">
-            This is my project.
-          </p>
-          <div class="project-demo">
-            <a href="#" class="link"
-              >More info</a>
-            <a href="#" class="link" target="_blank" rel="noopener"
-              >View Demo</a>
-            <a href="https://github.com/catagalan-mtl/frontrow-cat" class="link" target="_blank" rel="noopener"
-              >GitHub <i class="fa-brands fa-github-alt"></i></a>
-          </div>
-        </div>
-        <picture class="project-illustration">
-          <%= image_tag "frontrow-banner" %>
-        </picture>
-      </project>
-      <project class="project-box featured-project">
-        <div class="project-textbox">
-          <h3 class="h3">
-            Pawsh
-          </h3>
-          <p class="project-text">
-            This is my project.
-          </p>
-          <div class="project-demo">
-            <a href="#" class="link" target="_blank" rel="noopener"
-              >More info</a>
-            <a href="#" class="link" target="_blank" rel="noopener"
-              >View Demo</a>
-            <a href="https://github.com/catagalan-mtl/pawsh" class="link" target="_blank" rel="noopener"
-              >GitHub <i class="fa-brands fa-github-alt"></i></a>
-          </div>
-        </div>
-        <picture class="project-illustration">
-          <%= image_tag "pawsh-landing" %>
-        </picture>
-      </project>
-      <project class="project-box featured-project">
-        <div class="project-textbox">
-          <h3 class="h3">
-            My Portfolio
-          </h3>
-          <p class="project-text">
-            This is my project.
-          </p>
-          <div class="project-demo">
-            <a href="#" class="link" target="_blank" rel="noopener"
-              >More info</a>
-            <a href="#" class="link" target="_blank" rel="noopener"
-              >View Demo</a>
-            <a href="https://github.com/catagalan-mtl/my-portfolio" class="link" target="_blank" rel="noopener"
-              >GitHub <i class="fa-brands fa-github-alt"></i></a>
-          </div>
-        </div>
-        <picture class="project-illustration">
-          <%= image_tag "sharing-card" %>
-        </picture>
-      </project>
-    <%# </div> %>
   </div>
 </section>

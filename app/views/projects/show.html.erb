@@ -13,8 +13,8 @@
   <div class="container">
     <div class="header-small-textbox">
       <!-- Replace with your name and job title -->
-      <h1 class="h1">FrontRow</h1>
-      <h4 class="h4"><i>The Concert Starts Here</i></h4>
+      <h1 class="h1"><%=@project.name%></h1>
+      <h4 class="h4"><i><%=@project.tagline%></i></h4>
     </div>
   </div>
 
@@ -34,22 +34,26 @@
         </ul>
       </div>
       <picture class="media-box">
-        <%= video_tag @project.video_url, loop: :loop, muted: :muted, controls: :true%>
+        <% if @project.video_url %>
+          <%= video_tag @project.video_url, loop: :loop, muted: :muted, controls: :true%>
+        <% else %>
+          <%= image_tag @project.img_url %>
+        <% end %>
       </picture>
       <div class="credits">
         <% if @project.contribute %>
           <h4><strong>Contributors:</strong></h4>
-          <ul>
-            <% @project.contribute.each do |name, gh| %>
-              <li><%=  link_to ("<i class='fa-brands fa-github-alt'></i>").html_safe, gh, class: "link-icon", target: :_blank  %> - <%= name %></li>
-            <% end %>
-          </ul>
         <% end %>
         <% if @project.credits %>
-          <h4><strong>Credits:</strong></h4>
+          <%# <h4><strong>Credits:</strong></h4> %>
           <ul>
-            <% @project.credits.each do |credit| %>
-              <li><%= credit %></li>
+            <li><%= @project.credits %></li>
+          </ul>
+        <% end %>
+        <% if @project.contribute %>
+          <ul>
+            <% @project.contribute.each do |name, gh| %>
+              <li><%= link_to ("<i class='fa-brands fa-github-alt'></i>").html_safe, gh, class: "link-icon", target: :_blank  %> - <%= name %></li>
             <% end %>
           </ul>
         <% end %>
