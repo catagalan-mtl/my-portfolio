@@ -5,6 +5,7 @@
 @import url("../components/_project_card.css");
 @import url("../components/_contact_form.css");
 @import url("../components/_info_card.css");
+@import url("../components/_footer.css");
 
 :root {
   --h1: 3.5rem;
