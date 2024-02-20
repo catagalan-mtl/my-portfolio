@@ -83,6 +83,7 @@ body.light .signatures {
   margin-top: var(--gutter-large);
   background-color: var(--bg-color-secondary);
   border-radius: var(--gutter-x-small);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .form-field label,
@@ -126,4 +127,5 @@ body.light .signatures {
 
 .contact-form button[type="submit"] {
   border: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
 }

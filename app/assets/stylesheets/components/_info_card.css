@@ -45,14 +45,15 @@ body.light .header-small {
   flex-direction: column;
   flex-basis: 100%;
   gap: 3.5%;
-  margin-block-start: var(--gutter-large);
+  margin-block-start: var(--gutter-x-large);
   margin-block-end: px;
   /* align-items: center; */
   justify-content: center;
   border: 1px solid var(--border);
   padding: var(--gutter-medium) var(--gutter-small);
-  border-radius: var(--gutter-x-small);
+  border-radius: var(--gutter-medium);
   background-color: var(--bg-color-secondary);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .info-textbox {
