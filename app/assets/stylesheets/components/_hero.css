@@ -22,7 +22,7 @@ body.light .header {
 
 .header-textbox {
   position: absolute;
-  top: 52%;
+  top: 54%;
   transform: translateY(-50%);
 }
 
@@ -31,16 +31,35 @@ body.light .header {
   font-weight: 400;
   max-inline-size: 745px;
   margin-block-start: var(--gutter-micro);
-  margin-block-end: var(--gutter-medium);
 }
 
+.header-links {
+  display: flex;
+  /* flex-direction: column; */
+  gap: var(--gutter-x-small);
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: var(--gutter-medium);
+  padding-left: 0.5vh;
+}
+
+.header-link {
+  font-size: var(--text-x-large);
+  color: var(--body);
+  opacity: 0.875;
+  transition: 225ms ease-in opacity;
+}
+
+.header-link:hover {
+  color: var(--sub);
+}
 @media (max-width: 1200px) {
   .header-text {
     max-inline-size: 685px;
   }
 
   .header-textbox {
-    top: 52%;
+    top: 55%;
   }
 }
 
@@ -50,7 +69,7 @@ body.light .header {
   }
 
   .header-textbox {
-    top: 56%;
+    top: 58%;
   }
 }
 
@@ -61,7 +80,7 @@ body.light .header {
 
 @media (max-width: 400px) {
   .header-textbox {
-    top: 54%;
+    top: 56%;
     left: 0;
     text-align: center;
     padding-inline: 0.6rem;
