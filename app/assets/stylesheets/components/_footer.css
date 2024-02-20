@@ -47,7 +47,7 @@ body.light .footer {
 
 .footer-links {
   display: flex;
-  gap: var(--gutter-large);
+  gap: var(--gutter-x-large);
   list-style-type: none;
 }
 
