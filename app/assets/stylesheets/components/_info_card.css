@@ -59,8 +59,12 @@ body.light .header-small {
 .info-textbox {
   height: 100%;
   align-items: center;
+  margin-top: var(--gutter-small);
 }
 
+.info-textbox p {
+  color: var(--sub);
+}
 
 .info-box .info-textbox {
   flex-basis: 50%;
