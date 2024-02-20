@@ -110,6 +110,10 @@ body.light .header-small {
   color: var(--body)
 }
 
+.link-icon:hover {
+  color: var(--sub);
+}
+
 .credits {
   align-self: flex-start;
   font-size: var(--text-small);
