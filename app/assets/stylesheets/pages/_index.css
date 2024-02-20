@@ -5,12 +5,14 @@
 @import url("../components/_project_card.css");
 @import url("../components/_contact_form.css");
 @import url("../components/_info_card.css");
+@import url("../components/_footer.css");
 
 :root {
   --h1: 3.5rem;
   --h2: 3rem;
   --h3: 2.145rem;
   --h4: 1.5rem;
+  --text-x-large: 2.145rem;
   --text-large: 1.6rem;
   --text-medium: 1.275rem;
   --text-small: 1.125rem;

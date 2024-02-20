@@ -22,7 +22,7 @@ body.light .header {
 
 .header-textbox {
   position: absolute;
-  top: 54%;
+  top: 52%;
   transform: translateY(-50%);
 }
 
@@ -38,11 +38,19 @@ body.light .header {
   .header-text {
     max-inline-size: 685px;
   }
+
+  .header-textbox {
+    top: 52%;
+  }
 }
 
 @media (max-width: 845px) {
   .header-text {
     max-inline-size: 585px;
+  }
+
+  .header-textbox {
+    top: 56%;
   }
 }
 
@@ -53,6 +61,7 @@ body.light .header {
 
 @media (max-width: 400px) {
   .header-textbox {
+    top: 54%;
     left: 0;
     text-align: center;
     padding-inline: 0.6rem;
