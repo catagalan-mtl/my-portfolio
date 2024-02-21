@@ -3,7 +3,7 @@
 
 .header {
   min-block-size: calc(100vh + var(--radius));
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,7 +22,7 @@ body.light .header {
 
 .header-textbox {
   position: absolute;
-  top: 54%;
+  top: 58%;
   transform: translateY(-50%);
 }
 
@@ -59,7 +59,7 @@ body.light .header {
   }
 
   .header-textbox {
-    top: 55%;
+    top: 57%;
   }
 }
 
@@ -69,7 +69,7 @@ body.light .header {
   }
 
   .header-textbox {
-    top: 58%;
+    top: 60%;
   }
 }
 
@@ -78,9 +78,15 @@ body.light .header {
   gap: var(--gutter-x-small);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .header-textbox {
-    top: 56%;
+    top: 60%;
+  }
+
+}
+@media (max-width: 480px) {
+  .header-textbox {
+    top: 61%;
     left: 0;
     text-align: center;
     padding-inline: 0.6rem;
