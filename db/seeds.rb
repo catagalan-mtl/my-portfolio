@@ -48,10 +48,11 @@ puts "creating My Portfolio...  "
 portfolio = Project.new(name: "My Portfolio",
 description: "Personal portfolio website.",
 img_url: "sharing-card",
+video_url: "portfolio-demo.mp4",
 info: "This website was developed as a personal project to showcase my work. It is a fully responsive website built from a single page template and transformed into a rails app with a PostgreSQL database. I have modified and restructured the original open source code to support my needs and preferences, creating new features such as show pages for my projects and a functioning contact form.",
 stack: "Ruby on Rails, HTML5, CSS, JavaScript, Stimulus, PostgreSQL, Heroku",
 gh_url: "https://github.com/catagalan-mtl/my-portfolio",
-credits: "* this project was initially developed from a template by:",
+credits: "* original open source template by:",
 contribute: {"Syed Mohsin"=>"https://github.com/devsyedmohsin"})
 
 portfolio.save!
