@@ -85,6 +85,10 @@ body.light .header {
     text-align: center;
     padding-inline: 0.6rem;
   }
+  .header-links {
+    gap: var(--gutter-small);
+    justify-content: center;
+  }
   .header-btns {
     flex-direction: column;
     width: 80%;
