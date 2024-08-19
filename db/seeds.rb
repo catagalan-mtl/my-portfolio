@@ -10,7 +10,7 @@ frontrow = Project.new(
   description: "Social platform for concert goers.",
   img_url: "frontrow-banner",
   info:
-   "Frontrow is a social platform where fans can find, rate and review concerts, as well as interact, follow and connect with other fans. This was the final team project at Le Wagon bootcamp. It was developed in a two week sprint. As a collaborator in this project I worked mostly on the back end on multiple features, and developing the chat room from start to finish.",
+   "Frontrow is a social platform where fans can find, rate and review concerts, as well as interact, follow and connect with other fans. This was the final team project at Le Wagon bootcamp. It was developed in a two week sprint. As a participant in this project I collaborated in building the back end and the database, created front end elements and implemented the chat feature in its entirety.",
   stack:
    "Ruby on Rails, HTML5, SCSS, Bootstrap, JavaScript, Stimulus, Webpack, PostgreSQL, Websocket, Claudinary, Heroku",
   video_url: "frontrow-demo.mp4",
